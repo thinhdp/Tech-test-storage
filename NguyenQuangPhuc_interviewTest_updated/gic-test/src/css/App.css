@@ -1,0 +1,266 @@
+/* I prefer to use the SCSS but as mentioned in the test paper so I decided to use the pure CSS style instead this time. */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --orange: #fbb96b;
+  --pink: #fe7e73;
+  --white: #fff;
+  --black: #000;
+  --red: #ff0000;
+  --yellow: #ffe100;
+  --gray: #808080;
+  --background: #f2f2f2;
+}
+
+/* common styles */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  width: 6rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+button {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+a {
+  text-decoration: none;
+}
+
+.action {
+  gap: 1rem;
+}
+
+/* common styles end*/
+/* table section */
+table {
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+table th {
+  height: 3.5rem;
+  background-color: var(--gray);
+}
+
+table th:not(:last-child) {
+  padding: 0 2rem;
+}
+
+table td {
+  padding: 1rem;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--background);
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.table__action {
+  width: 15rem;
+}
+/* table section end*/
+
+/* home section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home__header {
+  width: 80%;
+}
+
+.home__header h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.home__nav__container {
+  text-align: end;
+}
+
+.home__nav__container a {
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #000;
+}
+/* home section end*/
+
+/* form section */
+.form {
+  flex-direction: column;
+}
+
+.form__section input:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.form__section {
+  margin-top: 3rem;
+  padding: 3rem;
+  width: 30%;
+  flex-direction: column;
+  background-color: var(--background);
+  border-radius: 1rem;
+}
+
+.form__section input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  height: 3rem;
+}
+
+.form__section__radio {
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: left;
+}
+
+.form__section__radio p {
+  margin: 0;
+}
+
+.form__section__submit {
+  justify-content: end;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: var(--gray);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+form input {
+  font-family: inherit;
+  font-size: inherit;
+}
+/* form section end*/
+
+/* error-section */
+.error__messsage {
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--red);
+}
+/* error-section end*/
+
+/*theme specific*/
+.white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.edit {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.delete {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.submit {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.input-error {
+  border: 1px solid var(--red) !important;
+}
+
+.sm {
+  width: 5rem;
+}
+
+.md {
+  width: 6rem;
+}
+
+.lg {
+  width: 7rem;
+}
+
+.v-lg {
+  width: 12rem;
+}
+/* theme specific end */
+
+/* popup section */
+.popup__overlay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup__content {
+  top: 20rem;
+  padding: 2rem;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.popup__actions {
+  margin-top: 2rem;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.popup__content h2 {
+  margin: 0;
+}
+
+@keyframes animatetop {
+  from {
+    top: -30rem;
+    opacity: 0;
+  }
+  to {
+    top: 20rem;
+    opacity: 1;
+  }
+}
+
+/* popup section end */
